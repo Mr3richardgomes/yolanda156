@@ -1,1 +1,1 @@
-export * from "./Home.js";
+export * from "./Chamado.js";

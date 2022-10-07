@@ -5,10 +5,10 @@ const styles = StyleSheet.create({
   container: { flex: 1, alignItems: 'center', justifyContent: 'center' }
 })
 
-export const HomeScreen = ({ navigation }) => {
+export const ChamadosScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>Details Screen</Text>
+      <Text>CHAMADOS</Text>
       <Button
         onPress={() => navigation.navigate('Details')}
         title="ABRIR CHAMADO"
