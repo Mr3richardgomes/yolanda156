@@ -54,7 +54,7 @@ function StackScreen() {
 
   const [nmTicket, setNmTicket] = useState("");
 
-  const [countTicket, setCountTicket] = useState(0);
+  const [countTicket, setCountTicket] = useState(1);
 
   const [jsonTickets, setJsonTickets] = useState([]);
 
@@ -85,6 +85,7 @@ function StackScreen() {
     Alert.alert("😁", "Chamado Aberto Com Sucesso, Obrigado!");
     console.log("jsonTickets");
     console.log(jsonTickets);
+    Keyboard.dismiss();
   }
 
 
@@ -160,7 +161,7 @@ export const ChamadoScreen = ({ navigation }) => {
       <Tab.Screen tabBarOptions={{
         showLabel: false
       }} name="ChamadoSolicitacao" options={{ title: 'Nova Solicitação' }} component={StackScreen} />
-      <Tab.Screen name="ChamadosLista"  options={{ title: 'Lista de Chamados' }} component={ChamadosScreen} />
+      <Tab.Screen name="ChamadosLista" options={{ title: 'Lista de Chamados' }} component={ChamadosScreen} />
 
     </Tab.Navigator>
   );
