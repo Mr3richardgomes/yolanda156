@@ -11,11 +11,14 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    fontSize: 35,
+    fontSize: 60,
+    fontFamily: "Arial",
     lineHeight: 84,
+    textShadowColor: 'black',
+    textShadowOffset: {width: -2, height: 10},
+    textShadowRadius: 10,
     fontWeight: "bold",
     textAlign: "center",
-    backgroundColor: "#00000052"
   },
   button: {
     marginTop:100,

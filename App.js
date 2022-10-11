@@ -13,9 +13,17 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen options={{ headerShown: false }}  name="Home" component={HomeScreen} />
-        <Stack.Screen options={{ title: '' ,headerBackTitle : 'voltar'} } name="Chamado" component={ChamadoScreen} />
+      <Stack.Navigator >
+        <Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} />
+        <Stack.Screen options={{
+          title: '',
+          headerTintColor: 'black',
+          headerBackTitle: 'voltar',
+          headerStyle: {
+            backgroundColor: 'white',
+            fontWeight: 'bold'
+          },
+        }} name="Chamado" component={ChamadoScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
