@@ -26,7 +26,7 @@ export const ChamadosScreen = ({ route, navigation }) => {
                 <ListItem.Title>{Json.dsTicket}</ListItem.Title>
               </ListItem.Content>
               <ListItem.Chevron onPress={() => {
-    
+                
                 navigation.push('Descricao', {
                   Json: Json,
                   jsonTickets: jsonTickets
