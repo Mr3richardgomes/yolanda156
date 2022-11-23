@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from 'react';
 
-import { StyleSheet, Text, View, Pressable, TextInput, TouchableWithoutFeedback, Keyboard, Alert, Dimensions } from 'react-native';
+
+import { StyleSheet, Text, View, Pressable, TouchableWithoutFeedback, Keyboard} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ChamadosScreen } from '../chamados/index';
-import moment from "moment";
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import { margin } from '@mui/system';
 
-var width = Dimensions.get('window').width; //full width
-var height = Dimensions.get('window').height; //full heigh°  t
 
 
 const styles = StyleSheet.create({
@@ -20,11 +13,6 @@ const styles = StyleSheet.create({
   },
   box: {
     margin: 20
-  },
-  input: {
-    borderWidth: 0.5,
-    borderRadius: 9,
-    padding: 10
   },
   textDescription: {
     fontSize: 20,
@@ -59,16 +47,7 @@ const styles = StyleSheet.create({
 
 export const ChamadoConteudoScreen = ({ route, navigation }) => {
   const { dsTicket, dtAbertura, nmTicket, id } = route.params.Json;
-  //console.log('jsonTickets ', route.params.jsonTickets)
 
-  function fTeste() {
-    alert(1)
-    for (let wIdx = 0; wIdx < route.params.jsonTickets.length; wIdx++) {
-      const wItem = route.params.jsonTickets[wIdx];
-      console.log(wItem.id == id)
-      route.params.jsonTickets.splice(wIdx, 1);
-    }
-  }
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -83,7 +62,7 @@ export const ChamadoConteudoScreen = ({ route, navigation }) => {
           <Text style={styles.text}>Descrição</Text>
           <Text style={styles.textDescription}>{dsTicket}</Text>
           <Pressable style={styles.button} onPress={() => {
-            alert(12)
+       
             for (let wIdx = 0; wIdx < route.params.jsonTickets.length; wIdx++) {
               const wItem = route.params.jsonTickets[wIdx];
               if (wItem.id == id) {
